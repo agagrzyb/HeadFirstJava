@@ -21,5 +21,4 @@ public enum Coffee {
 	public double getCoffee(){
 		return coffee;
 	}
-
 }
