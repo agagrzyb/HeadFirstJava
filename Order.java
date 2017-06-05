@@ -4,9 +4,11 @@ import java.util.Arrays;
 
 public class Order {
 	//member variables
-	private int orderNumber;
 	private String [] coffees; // an array of Coffee Enum values
 	private Coffee coffee;  //enum file
+	//static / class variable - has to be public
+	public static int orderNumber;
+	
 	//constructors
 	public Order(){
 		orderNumber++;
@@ -33,6 +35,7 @@ public class Order {
 	public String toString() {
 		return "Order Number = " + orderNumber + 
 				", coffees = " + Arrays.toString(coffees) + 
-				", coffee = " + coffee;
+				", coffee = " + coffee +
+				String.format(", Price = $%.2f", calculatePrice());
 	}
 }
